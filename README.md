@@ -2,10 +2,11 @@
 
 A prova consistiu em criar uma API para fazer um crud de produtos e outra para cadastro de compras
 
-Caso tenha curiosidade de vê-la funcionar, necessário instalar no seu VS:
+Caso tenha curiosidade de vê-la funcionar, necessário:
 
 SqlServer express instalado.
 
+instalar no seu VS:
 * EntityFrameworkCora
 * EntityFrameworkCora.Design 
 * EntityFrameworkCora.SqlServer
