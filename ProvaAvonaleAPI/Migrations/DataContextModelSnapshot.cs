@@ -60,24 +60,42 @@ namespace ProvaAvonaleAPI.Migrations
                     b.Property<int>("CartaoId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Estado")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Id_produto")
                         .HasColumnType("int");
 
                     b.Property<int>("Qtd_comprada")
                         .HasColumnType("int");
 
-                    b.Property<double>("Valor")
-                        .HasColumnType("float");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CartaoId");
 
                     b.ToTable("Compras");
+                });
+
+            modelBuilder.Entity("ProvaAvonaleAPI.Pagamento", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CartaoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Valor")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartaoId");
+
+                    b.ToTable("Pagamentos");
                 });
 
             modelBuilder.Entity("ProvaAvonaleAPI.Produto", b =>
@@ -104,6 +122,17 @@ namespace ProvaAvonaleAPI.Migrations
                 });
 
             modelBuilder.Entity("ProvaAvonaleAPI.Compra", b =>
+                {
+                    b.HasOne("ProvaAvonaleAPI.Cartao", "Cartao")
+                        .WithMany()
+                        .HasForeignKey("CartaoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cartao");
+                });
+
+            modelBuilder.Entity("ProvaAvonaleAPI.Pagamento", b =>
                 {
                     b.HasOne("ProvaAvonaleAPI.Cartao", "Cartao")
                         .WithMany()

@@ -14,11 +14,7 @@ namespace ProvaAvonaleAPI.Controllers
 
         [HttpPost]
         public async Task<ActionResult<List<Compra>>> addCompra(Compra compra)
-        {          
-            if (compra.Valor <= 100)
-                compra.Estado = "REJEITADO";
-            else
-                compra.Estado = "APROVADO";
+        {                 
             _context.Compras.Add(compra);
             await _context.SaveChangesAsync();
 
