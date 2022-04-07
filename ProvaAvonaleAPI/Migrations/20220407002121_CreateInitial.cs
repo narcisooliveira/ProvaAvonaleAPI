@@ -14,10 +14,11 @@ namespace ProvaAvonaleAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Titiular = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Titular = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    numero = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Data_expiracao = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Bandeira = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Cvv = table.Column<int>(type: "int", nullable: false)
+                    Cvv = table.Column<string>(type: "nvarchar(max)", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -45,7 +46,7 @@ namespace ProvaAvonaleAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Id_produto = table.Column<int>(type: "int", nullable: false),
+                    Produto_id = table.Column<int>(type: "int", nullable: false),
                     Qtd_comprada = table.Column<int>(type: "int", nullable: false),
                     CartaoId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -66,7 +67,7 @@ namespace ProvaAvonaleAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Valor = table.Column<int>(type: "int", nullable: false),
+                    Valor = table.Column<double>(type: "float", nullable: false),
                     Estado = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CartaoId = table.Column<int>(type: "int", nullable: false)
                 },

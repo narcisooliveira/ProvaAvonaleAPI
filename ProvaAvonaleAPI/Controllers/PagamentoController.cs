@@ -24,7 +24,7 @@ namespace ProvaAvonaleAPI.Controllers
             _context.Pagamentos.Add(pagamento);
             await _context.SaveChangesAsync();
 
-            return Ok(await _context.Compras.ToListAsync());
+            return Ok(await _context.Pagamentos.ToListAsync());
         }
     }
 }
