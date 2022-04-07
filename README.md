@@ -1,6 +1,6 @@
 # ProvaAvonaleAPI
 
-A prova consistiu em criar uma API para fazer um crud de produtos e outra para cadastro de compras e pagamento
+A prova consistiu em criar uma API para fazer um crud de produtos e cadastro de compras e pagamento
 
 Caso tenha curiosidade de vê-la funcionar, necessário:
 
