@@ -1,8 +1,6 @@
 # ProvaAvonaleAPI
 
-A prova consistiu em criar uma API para fazer um crud de produtos e cadastro de compras e pagamento
-
-Caso tenha curiosidade de vê-la funcionar, necessário:
+Para vê-la funcionar é necessário:
 
 SqlServer express instalado.
 
@@ -13,5 +11,5 @@ instalar no seu VS:
 
 Rodar via package manager console:
 
-* dotnet ef migrations add "parametro de criação"
+* dotnet ef migrations add "parâmetro de criação"
 * dotnet ef database update
