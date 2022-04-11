@@ -11,5 +11,4 @@ instalar no seu VS:
 
 Rodar via package manager console:
 
-* dotnet ef migrations add "parâmetro de criação"
 * dotnet ef database update
